@@ -10,13 +10,13 @@ type PersonStringProps =
   | "homeworld"
   | "terrain";
 
-type SWPersonMapped = {
+type SWPerson = {
   [Property in PersonStringProps]: string;
 };
 
-type SWPerson = SWPersonMapped & {
-  films: string[];
-};
+// type SWPerson = SWPersonMapped & {
+//   films: string[];
+// };
 
 const Person = () => {
   // const [name, setName] = useState('');
@@ -39,7 +39,7 @@ const Person = () => {
           gender: luke.gender,
           skin_color: luke.skin_color,
           hair_color: luke.hair_color,
-          films: luke.films,
+          // films: luke.films,
           homeworld: homeworldData.name,
           terrain: homeworldData.terrain,
         });
@@ -60,7 +60,7 @@ const Person = () => {
         {person
           ? `Name: ${person.name}, Eye color: ${person.eye_color}, Birth year: ${person.birth_year} Gender: ${person.gender} Skin color: ${person.skin_color} Hair Color: ${person.hair_color} 
                 
-                    Number of films: ${person.films.length}
+                   
                 
                 Homeworld: ${person.homeworld}
                 Homeworld Terrain: ${person.terrain}
